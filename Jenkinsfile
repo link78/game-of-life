@@ -1,6 +1,6 @@
 node {
   stage ('Build'){
-    mvn --version
+  
     mvn install
   }
   stage('Test'){
