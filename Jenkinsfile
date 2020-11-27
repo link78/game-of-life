@@ -4,9 +4,9 @@ node {
     mvn install
   }
   stage('Test'){
-   echo "testing java apllication'
+   echo "testing java apllication"
   }
   stage('Deploy'){
-   echo "deploying web app'
+   echo "deploying web app"
   }
 }
