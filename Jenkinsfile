@@ -1,12 +1,27 @@
-node {
-  stage ('Build'){
-  
-    mvn install
-  }
-  stage('Test'){
-   echo "testing java apllication"
-  }
-  stage('Deploy'){
-   echo "deploying web app"
-  }
+#!/usr/bin/groovy
+pipeline {
+	agent any
+
+	stages {
+
+		stage('Build') {
+			steps {
+				echo 'Building..'
+        mvn install
+			}
+		}
+
+		stage('Test') {
+			steps {
+				echo 'Testing..'
+			}
+		}
+
+		stage('Deploy') {
+			steps {
+				echo 'Deploying....'
+			}
+		}
+
+	}
 }
